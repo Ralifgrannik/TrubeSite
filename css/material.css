@@ -1,0 +1,31 @@
+@import url(./../css/main.css);
+
+
+header {
+    margin-bottom: 0;
+}
+
+body {
+    text-align: center;
+}
+
+.formula {
+    font-size: 1.5em;
+    margin: 20px;
+    padding: 15px 15px 0px;
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+  }
+  .desc {
+    font-size: 1.2em;
+    color: #666;
+  }
+
+.material-text {
+    text-align: left;
+    max-width: 1000px;
+    margin: 20px auto 15px;
+    font-size: 23px;
+}
