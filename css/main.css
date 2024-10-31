@@ -1,4 +1,10 @@
 /* Основные стили */
+
+:root {
+    --accent: rgb(255, 145, 0);
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -96,8 +102,9 @@ header p {
 }
 /* Контакты */
 .contact {
-    margin-top: 40px;
+    margin-top: auto;
     text-align: center;
+
 }
 .contact h3 {
     font-size: 1.8em;
@@ -108,9 +115,10 @@ header p {
     font-size: 1.1em;
     color: #c3e8e9;
 }
+
 /* Футер */
 footer {
-    margin-top: 40px;
+    margin-top: auto;
     text-align: center;
     font-size: 0.9em;
     color: #00e6e6;
