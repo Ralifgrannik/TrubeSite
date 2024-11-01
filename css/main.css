@@ -83,10 +83,11 @@ header p {
 }
 /* Галерея */
 .gallery {
+    width: 800px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 .gallery img {
     width: 100%;
@@ -100,6 +101,8 @@ header p {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 255, 255, 0.8);
 }
+
+
 /* Контакты */
 .contact {
     margin-top: auto;

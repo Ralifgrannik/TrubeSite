@@ -20,3 +20,15 @@ a:hover {
     margin-bottom: 15px;
 }
 
+.a__back_2 {
+    text-align: left;
+    font-size: 30px;
+    width: 700;
+    margin-bottom: 15px;
+    background-color: antiquewhite  ;
+}
+
+
+.mechanics__chapter {
+    color: white;
+}
