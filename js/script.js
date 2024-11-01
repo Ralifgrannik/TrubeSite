@@ -30,7 +30,7 @@ document.querySelectorAll(".gallery img").forEach(img => {
                 fileName = "mechanics.html";
                 break;
             case "Термодинамика и молекулярная физика":
-                fileName = "Mechanics/1_chapter.html";
+                fileName = "molecular_physics.html";
                 break;
             case "Электростатика и электродинамика":
                 fileName = "electrostatics.html";
