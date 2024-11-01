@@ -1,0 +1,22 @@
+.mechanics__items {
+    list-style: none;
+    text-align: left;
+    line-height: 1.6;
+}
+
+a {
+    transition: color 0.01s ease-in;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(218, 131, 18);
+}
+
+.a__back {
+    text-align: left;
+    font-size: 30px;
+    width: 700;
+    margin-bottom: 15px;
+}
+
