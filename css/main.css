@@ -28,6 +28,48 @@ nav {
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6);
     padding: 50px 0 20px;
 }
+
+/* Стили для бокового меню */
+.side-nav {
+    display: flex; /* Показываем на больших экранах */
+    /* Здесь остальные стили для бокового меню */
+}
+
+/* Стили для кнопки */
+.menu-toggle {
+    display: none; /* Кнопка скрыта на больших экранах */
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    /* Переносим меню наверх */
+    body {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: row;  /* Горизонтально */
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: none;
+        justify-content: space-around;
+        font-size: 12px;
+    }
+    nav a {
+        padding: 5px;
+        font-size: 1em;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}
+
+
 nav a {
     color: #ffffff;
     text-decoration: none;
@@ -44,6 +86,8 @@ nav a:hover {
 }
 /* Контент */
 .main-content {
+    max-width: 940px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -83,11 +127,18 @@ header p {
 }
 /* Галерея */
 .gallery {
-    width: 800px;
+    max-width: 800px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin: 20px auto;
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: 1fr; /* один столбец */
+    }
 }
 .gallery img {
     width: 100%;
@@ -117,6 +168,13 @@ header p {
 .contact p {
     font-size: 1.1em;
     color: #c3e8e9;
+}
+
+/* Скрываем .contact на экранах меньше 768px */
+@media (max-width: 768px) {
+    .contact {
+        display: none;
+    }
 }
 
 /* Футер */

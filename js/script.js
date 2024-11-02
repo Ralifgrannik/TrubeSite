@@ -1,3 +1,4 @@
+
 // Функция для загрузки HTML-файла и замены содержимого
 function loadTheory(fileName) {
     console.log("Загрузка файла:", fileName);
@@ -131,4 +132,10 @@ function setupLinkHandlers() {
     });
 }
 
+
+function toggleMenu() {
+    console.log('ji')
+    const nav = document.querySelector('.side-nav');
+    nav.classList.toggle('open'); // Добавляем или удаляем класс "open"
+}
 
