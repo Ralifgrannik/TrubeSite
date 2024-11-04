@@ -13,7 +13,6 @@
 
 body {
     background-image: url(./../media/OppFon.webp);
-    background-size: cover;
 }
 
 header {
@@ -22,11 +21,21 @@ header {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 4em;
     color: var(--maincolor);
     text-shadow: 0 0 12px var(--backcolor);
     margin-bottom: 30px;
+    margin-top: 10px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 2em;
+        margin-top: 0px;
+    }
+}
+
 
 /* Form styling */
 form {
