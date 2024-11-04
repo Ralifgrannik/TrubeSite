@@ -7,6 +7,7 @@ header {
 
 body {
     text-align: center;
+
 }
 
 .formula {
@@ -17,11 +18,12 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: inline-block;
-  }
-  .desc {
+}
+  
+.desc {
     font-size: 1.2em;
     color: #666;
-  }
+}
 
 .material-text {
     text-align: left;

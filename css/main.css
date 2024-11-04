@@ -93,7 +93,13 @@ nav a:hover {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
+    
 }
+
+.main-content::-webkit-scrollbar {
+    width: 0;
+  }
+
 header {
     text-align: center;
     padding: 20px 0;
@@ -194,4 +200,15 @@ footer {
 .content, .gallery {
     animation: fadeIn 1s ease forwards;
     opacity: 0;
+}
+
+
+.formula {
+    font-size: 1.5em;
+    margin: 20px;
+    padding: 15px 15px 0px;
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
 }
