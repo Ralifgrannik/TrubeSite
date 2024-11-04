@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Боковое меню -->
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="application.html">Подать заявку в трубу</a>
+    <a href="#">Новости физики</a>
+    <a href="material.html">Материалы для учебы</a>
+    <div class="contact">
+        <h3>Контакты</h3>
+        <p>Свяжитесь с нами: <br><strong>ссылка на тг</strong></p>
+    </div>
+</nav>
+
+<!-- Главный контент -->
+<div class="main-content">
+    <header>
+        <h1>Новости</h1>
+        <div class="news-feed">
+            <!-- Пример новостного поста -->
+            <div class="news-post">
+                <img src="./media/planet.webp" alt="Изображение новости" class="news-image">
+                <div class="news-details">
+                    <h2>Заголовок новости 1</h2>
+                    <p class="news-summary">Краткое содержание поста 1...</p>
+                    <p class="news-full-text">Полный текст поста 1, который раскрывается по нажатию. Здесь содержится подробная информация о новости...</p>
+                    <button class="news-toggle">Читать дальше</button>
+                </div>
+            </div>
+            <div class="news-post">
+                <img src="./media/planet.webp" alt="Изображение новости" class="news-image">
+                <div class="news-details">
+                    <h2>Заголовок новости 2</h2>
+                    <p class="news-summary">Краткое содержание поста 2...</p>
+                    <p class="news-full-text">Полный текст поста 2, который раскрывается по нажатию. Здесь содержится подробная информация о новости...</p>
+                    <button class="news-toggle">Читать дальше</button>
+                </div>
+            </div>
+            <!-- Добавьте больше постов здесь -->
+        </div>
+    </header>
+</div>
+
+<script src="./js/news.js"></script>
+
+</body>
+</html>

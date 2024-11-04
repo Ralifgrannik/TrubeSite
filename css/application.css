@@ -1,9 +1,20 @@
 @import url(./../css/main.css);
 
+@import url(./../css/main.css);
+
 /* Overall page styling */
 
-
 /* Header and form container */
+
+:root {
+    --maincolor: #ffffff;
+    --backcolor: #00000081;
+}
+
+body {
+    background-image: url(./../media/OppFon.webp);
+}
+
 header {
     text-align: center;
     padding: 20px;
@@ -11,27 +22,43 @@ header {
 
 header h1 {
     font-size: 4em;
-    color: #FF7400;
-    text-shadow: 0 0 12px #FF7400;
-    ;
+    color: var(--maincolor);
+    text-shadow: 0 0 12px var(--backcolor);
     margin-bottom: 30px;
 }
+
 /* Form styling */
 form {
     background: #2f2d29;
     border-radius: 8px;
     padding: 25px;
-    width: 380px;
+    width: 700px; /* Adjusted width to accommodate two columns */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
     border: 1px solid #4c463f;
     margin: 0 auto;
 }
 
-/* Form container layout */
+/* Flexbox layout for application form */
 .application {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Left column styling */
+.left-column {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex: 1;
+}
+
+/* Right column styling for textarea */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Label styling */
@@ -42,7 +69,7 @@ label {
 }
 
 /* Input field styling */
-input[type="text"] {
+input[type="text"], textarea {
     width: 100%;
     padding: 10px;
     background: #3a372f;
@@ -53,7 +80,19 @@ input[type="text"] {
     transition: background 0.3s ease, border 0.3s ease;
 }
 
-input[type="text"]:focus {
+/* Textarea styling */
+textarea {
+    height: 100%; /* Full height to match left column */
+    resize: none;
+}
+
+.about {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Focus effects for input and textarea */
+input[type="text"]:focus, textarea:focus {
     background: #3d3b34;
     border-color: #9e8c75;
 }
@@ -94,5 +133,8 @@ form::before {
 @media (max-width: 450px) {
     form {
         width: 90%;
+    }
+    .application {
+        flex-direction: column;
     }
 }

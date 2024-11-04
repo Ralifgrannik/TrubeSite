@@ -14,7 +14,7 @@
 <nav>
     <a href="index.html">Главная</a>
     <a href="#">Подать заявку в трубу</a>
-    <a href="#">Новости физики</a>
+    <a href="news.html">Новости физики</a>
     <a href="material.html">Материалы для учебы</a>
 
 
@@ -27,37 +27,43 @@
 <div class="main-content">
     <header>
         <h1>Заявка на вступление в наш медиацентр</h1>
-            <form action="">
-                <div class="application">
+        <form action="">
+            <div class="application">
+                <!-- Left Column with input fields -->
+                <div class="left-column">
                     <div>
-                        <label for="">Имя</label>
-                        <input type="text">
+                        <label for="firstName">Имя</label>
+                        <input type="text" id="firstName">
                     </div>
                     <div>
-                        <label for="">Фамилия</label>
-                        <input type="text">
+                        <label for="lastName">Фамилия</label>
+                        <input type="text" id="lastName">
                     </div>
                     <div>
-                        <label for="">Номер группы</label>
-                        <input type="text">
+                        <label for="groupNumber">Номер группы</label>
+                        <input type="text" id="groupNumber">
                     </div>
                     <div>
-                        <label for="">Направление</label>
-                        <input type="text">
+                        <label for="direction">Направление</label>
+                        <input type="text" id="direction">
                     </div>
                     <div>
-                        <label for="">Телеграмм для связи</label>
-                        <input type="text">
+                        <label for="telegram">Телеграмм для связи</label>
+                        <input type="text" id="telegram">
                     </div>
-                    <div>
-                        <label for="">Расскажите о себе, чем вы увлекаетесь, чем хотели бы заниматься в нашем студмедиа</label>
-                        <textarea type="text"></textarea>
-                    </div>
-                    <button>Отправить</button>
-                </div> 
-            </form>
+                </div>
+    
+                <!-- Right Column with textarea -->
+                <div class="right-column">
+                    <label for="about" class="about">Расскажите о себе, чем вы увлекаетесь, чем хотели бы заниматься в нашем студмедиа</label>
+                    <textarea id="about" rows="10"></textarea>
+                </div>
+                
+            </div> 
+            <button>Отправить</button>
+        </form>
     </header>
-
+    
     
     <script src="js/script.js"></script>
 
