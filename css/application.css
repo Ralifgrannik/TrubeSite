@@ -13,6 +13,7 @@
 
 body {
     background-image: url(./../media/OppFon.webp);
+    background-size: cover;
 }
 
 header {
@@ -21,7 +22,7 @@ header {
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 2em;
     color: var(--maincolor);
     text-shadow: 0 0 12px var(--backcolor);
     margin-bottom: 30px;
