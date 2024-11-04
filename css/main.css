@@ -227,3 +227,7 @@ footer {
 .tg_link:hover {
     background: none;
 }
+
+.content__text {
+    text-align: left;
+}
