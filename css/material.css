@@ -77,3 +77,62 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
     }
 }
+
+.theory__block {
+    margin-bottom: 70px;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px var(--shadow-color); /* Легкая тень */
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+
+.theory__name {
+    font-size: 1.3em;
+    color: var(--text-color);
+    border-left: 4px solid var(--accent); /* Акцентный бордер слева */
+    padding: 8px 15px;
+    margin: 15px 0;
+    background-color: #222; /* Чуть светлее основного фона */
+    border-radius: 8px;
+    font-weight: bold; /* Выделение текста */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Легкая тень */
+}
+
+.theory__text {
+    text-align: left;
+    color: var(--secondary-text);
+    line-height: 1.6; /* Увеличение межстрочного интервала для удобства чтения */
+    font-size: 1em;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 2px solid var(--accent); /* Левый бордер для визуального разделения */
+}
+
+
+.formula {
+    background-color: var(--bg-color); /* Темный фон для формул */
+    border-left: 5px solid var(--accent); /* Акцентный голубой цвет для выделения */
+    padding: 15px 20px; /* Удобные внутренние отступы */
+    margin: 25px auto; /* Отступы сверху и снизу, центрирование по горизонтали */
+    font-size: 1.2em; /* Чуть увеличенный размер текста */
+    font-family: "Georgia", serif; /* Шрифт, подходящий для формул */
+    border-radius: 10px; /* Закругленные углы */
+    color: var(--text-color); /* Светлый цвет текста */
+    text-align: center; /* Центрирование текста */
+    max-width: 50%; /* Ограничение ширины, чтобы формулы не растягивались */
+    box-shadow: 0px 4px 10px var(--shadow-color); /* Тень с голубым оттенком */
+    transition: background-color 0.3s ease; /* Плавный переход для фона при наведении */
+}
+
+
+
+.formula__description {
+    text-align: left;
+    color: rgb(155, 155, 155); /* Светло-голубой дополнительный текст */
+    font-size: 0.9em; /* Немного уменьшенный размер */
+    margin-top: 5px; /* Отступ сверху */
+    margin-bottom: 20px; /* Нижний отступ */
+    margin-left: 25%;
+}
