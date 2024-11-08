@@ -136,3 +136,41 @@ footer {
     margin-bottom: 20px; /* Нижний отступ */
     margin-left: 25%;
 }
+
+
+
+
+
+.mechanics__items {
+    list-style: none;
+    text-align: left;
+    line-height: 2;
+}
+
+a {
+    transition: color 0.01s ease-in;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(218, 131, 18);
+}
+
+.a__back {
+    text-align: left;
+    font-size: 30px;
+    width: 700;
+    margin-bottom: 15px;
+}
+
+.a__back_2 {
+    text-align: left;
+    font-size: 30px;
+    width: 700;
+    margin-bottom: 15px;
+}
+
+
+.mechanics__chapter {
+    color: white;
+}
