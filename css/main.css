@@ -1,55 +1,46 @@
-/* Основные стили */
+@import url(./../css/main.css);
 
+/* Color Palette */
 :root {
-    --accent: rgb(255, 145, 0);
+    --accent: #00e6e6; /* Акцентный голубой цвет */
+    --bg-color: #171718; /* Темный фон */
+    --text-color: white; /* Светлый основной текст */
+    --secondary-text: #a0f9ff; /* Светло-голубой дополнительный текст */
+    --link-color: #00e6e6; /* Цвет ссылок и акцентов */
+    --shadow-color: rgba(0, 255, 255, 0.3); /* Теневой оттенок с голубым */
 }
 
 
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    color: #e0e0e0;
+    color: var(--text-color);
 }
+
+/* Overall Layout */
 body {
     display: flex;
     height: 100vh;
-    background: #171718;
+    background: var(--bg-color);
 }
-/* Боковое меню */
+
+/* Sidebar Navigation */
 nav {
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     width: 250px;
-    background: #171718;
+    background: var(--bg-color);
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6);
     padding: 50px 0 20px;
 }
 
-/* Стили для бокового меню */
-.side-nav {
-    display: flex; /* Показываем на больших экранах */
-    /* Здесь остальные стили для бокового меню */
-}
-
-/* Стили для кнопки */
-.menu-toggle {
-    display: none; /* Кнопка скрыта на больших экранах */
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
-    border: none;
-}
-
-
-
+/* Links in Sidebar */
 nav a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -58,11 +49,13 @@ nav a {
     text-align: center;
     transition: background 0.3s ease, color 0.3s ease;
 }
+
 nav a:hover {
-    background: #272c48;
+    background: #333333;
     color: #ffffff;
 }
-/* Контент */
+
+/* Content Section */
 .main-content {
     max-width: 940px;
     margin: 0 auto;
@@ -71,107 +64,96 @@ nav a:hover {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
-    
 }
 
 .main-content::-webkit-scrollbar {
-    width: 0;
+    display: none;
   }
-
-
-
 
 header {
     text-align: center;
     padding: 20px 0;
     margin-bottom: 20px;
 }
+
 header h1 {
     font-size: 4em;
-    color: #00e6e6;
-    text-shadow: 0 0 12px #00e6e6;
+    color: var(--accent);
+    text-shadow: 0 0 12px var(--accent);
+    margin-bottom: 20px;
 }
+
 header p {
     font-size: 1.2em;
-    color: #a0f9ff;
+    color: var(--secondary-text);
 }
 
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 768px) {
-    /* Переносим меню наверх */
-    body {
-        flex-direction: column;
-    }
-    nav {
-        flex-direction: row;  /* Горизонтально */
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: none;
-        justify-content: space-around;
-        font-size: 12px;
-    }
-    nav a {
-        padding: 5px;
-        font-size: 1em;
-    }
-    .main-content {
-        padding: 20px;
-    }
-
-    header {
-        padding: 0px;
-    }
-
+/* Responsive Sidebar */
+.menu-toggle {
+    display: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    border: none;
 }
 
-
+/* Content Text */
 .content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 40px;
 }
+
 .content h2 {
     font-size: 2em;
-    color: #a0f9ff;
-    text-shadow: 0 0 5px #00e6e6;
+    color: var(--secondary-text);
+    text-shadow: 0 0 5px var(--accent);
     margin-bottom: 20px;
 }
+
 .content p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #b0c4c8;
+    color: #c3b091;
+    text-align: left;
 }
-/* Галерея */
+
+/* Gallery Styling */
 .gallery {
     max-width: 800px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin: 20px auto;
+    flex-wrap: wrap;
 }
-
 
 .gallery img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 4px 15px var(--shadow-color);
     transition: transform 0.4s, box-shadow 0.4s;
 }
+
 .gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.8);
+    box-shadow: 0 8px 25px rgba(209, 155, 96, 0.8);
 }
 
-/* Медиа-запрос для маленьких экранов */
-@media (max-width: 800px) {
-    .gallery {
-        grid-template-columns: 1fr; /* один столбец */
-    }
+/* Footer */
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--accent);
+    padding: 10px 0;
+    border-top: 1px solid rgba(65, 67, 106, 0.5);
 }
-
 
 /* Контакты */
 .contact {
@@ -189,6 +171,16 @@ header p {
     color: #c3e8e9;
 }
 
+.tg_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background: none;
+    box-shadow: 4px 0 10px rgba(255, 255, 255, 0);
+    padding: 10px 0 10px;
+}
+
 /* Скрываем .contact на экранах меньше 768px */
 @media (max-width: 768px) {
     .contact {
@@ -196,7 +188,126 @@ header p {
     }
 }
 
-/* Футер */
+.tg_link:hover {
+    background:none;
+}
+
+/* Hover effects */
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content,
+.gallery {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+/* Scrollbar Styling */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #3d3b34;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: row;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: none;
+        justify-content: space-around;
+        font-size: 12px;
+    }
+
+    nav a {
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
+
+
+/* Styling for Sections and Text */
+.intro-section, .directions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #232323;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.text-box, .image-box {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-box h2 {
+    color: var(--secondary-text);
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 8px var(--accent);
+}
+
+.text-box p, .text-box ul {
+    font-size: 1.1em;
+    color: #b0c4c8;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.text-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-box li::before {
+    content: "—";
+    margin-right: 8px;
+    color: var(--accent);
+}
+
+/* Image styling */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(209, 155, 96, 0.8);
+}
+
+/* Footer */
 footer {
     margin-top: auto;
     text-align: center;
@@ -205,42 +316,15 @@ footer {
     padding: 10px 0;
     border-top: 1px solid #41436a;
 }
-/* Анимации */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-.content, .gallery {
-    animation: fadeIn 1s ease forwards;
-    opacity: 0;
-}
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .intro-section, .directions-section {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.formula {
-    font-size: 1.5em;
-    margin: 20px;
-    padding: 15px 15px 0px;
-    background-color: #000000;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-}
-
-.tg_link {
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    width: 250px;
-    background: none;
-    box-shadow: 4px 0 10px rgba(255, 255, 255, 0);
-    padding: 10px 0 10px;
-}
-
-.tg_link:hover {
-    background: none;
-}
-
-.content__text {
-    text-align: left;
+    .text-box, .image-box {
+        padding: 0;
+    }
 }

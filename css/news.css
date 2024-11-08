@@ -1,81 +1,97 @@
-/* Основные стили */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+
+.main-content {
+    min-width: 80%;
+    max-width: 90%;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0a0c1a;
-    color: #e0e0e0;
-}
-
-/* Контейнер для новостной ленты */
 .news-feed {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 900px;
-    margin: 20px auto;
+    column-gap: 0;
+    row-gap: 80px;
+    min-width: 80%;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-/* Каждый пост занимает половину ширины */
 .news-post {
-    display: flex;
     flex-direction: column;
-    background-color: #1b1f3a;
-    border-radius: 10px;
-    overflow: hidden;
-    flex: 1 1 calc(50% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    gap: 20px;
+    max-width: 40%;
+    height: auto;
+    margin: 0 auto 30px;
 }
 
-/* Изображение поста */
+@media (max-width: 768px) {
+    .main-content {
+        min-width: 90%;
+        max-width: 100%;
+    }
+
+    .news-feed {
+        column-gap: 0;
+        row-gap: 80px;
+        min-width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .news-post {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 30px;
+    }
+}
+
+
+.news-post:hover {
+    transform: scale(1.02);
+}
+
 .news-image {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 100%; /* Задаем фиксированную высоту, чтобы картинка была квадратной */
+    object-fit: cover; /* Обрезаем изображение, чтобы сохранить квадратную форму */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* Контейнер деталей поста */
+
 .news-details {
-    padding: 15px;
-}
-
-/* Заголовок и текст */
-.news-details h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    padding: 20px;
 }
 
 .news-summary {
-    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--secondary-text);
+    margin: 15px 0;
 }
 
 .news-full-text {
-    display: none; /* Скрываем полный текст по умолчанию */
-    margin-bottom: 10px;
+    display: none;
+    font-size: 0.9em;
+    color: var(--text-color);
+    margin-top: 10px;
+    text-align: left;
 }
 
-/* Кнопка для раскрытия текста */
 .news-toggle {
-    background-color: #00e6e6;
-    color: #1b1f3a;
+    background-color: var(--accent);
+    color: var(--bg-color);
     border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
-.news-toggle:hover {
-    background-color: #00c5c5;
+header h1 {
+    margin-bottom: 20px;
 }
 
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 600px) {
-    .news-post {
-        flex: 1 1 100%; /* Один столбец на мобильных устройствах */
-    }
+h2 {
+    margin-bottom: 20px;
 }

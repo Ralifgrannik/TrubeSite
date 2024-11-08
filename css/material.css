@@ -1,46 +1,79 @@
 @import url(./../css/main.css);
 
+body {
+    text-align: center;
+    background: #171718;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
 
 header {
     margin-bottom: 0;
 }
 
-body {
-    text-align: center;
-
+header h1 {
+    margin-bottom: 35px;
 }
 
-.formula {
-    font-size: 1.5em;
-    margin: 20px;
-    padding: 15px 15px 0px;
-    background-color: #000000;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-}
-  
-.desc {
-    font-size: 1.2em;
-    color: #666;
-}
-
-.material-text {
-    text-align: left;
-    max-width: 1000px;
-    margin: 20px auto 15px;
-    font-size: 23px;
-}
-
+/* Gallery container for images */
 .gallery {
-  max-width: 800px;
-  margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 10px;
 }
 
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
 
-.a__back_2 {
-  text-align: left;
-  font-size: 30px;
-  width: 700;
-  margin-bottom: 15px;
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 145, 0, 0.8);
+}
+
+/* Contact section styling */
+.contact {
+    margin-top: auto;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 1.8em;
+    color: #a0f9ff;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    color: #c3e8e9;
+}
+
+/* Footer styling */
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9em;
+    color: #00e6e6;
+    padding: 10px 0;
+    border-top: 1px solid #41436a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 image per row on small screens */
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
+    }
 }
