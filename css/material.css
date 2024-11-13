@@ -174,3 +174,9 @@ a:hover {
 .mechanics__chapter {
     color: white;
 }
+
+.offer {
+    color: white;   
+    font-size: 10px;
+    text-align: center;
+}
